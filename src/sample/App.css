@@ -1,0 +1,33 @@
+.parent {
+    -fx-background-color: transparent;
+}
+
+.pane {
+    -fx-background-color: #ffffff;
+}
+
+.buttons {
+    -fx-background-color: #035956;
+}
+
+.text-field {
+    -fx-background-color: -fx-text-box-border, -fx-background;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-background-radius: 0;
+}
+.root {
+    -fx-background-color: black ;
+    -fx-padding: 20 20 20 20 ;
+}
+#textField {
+    -fx-background-color: #2fa02f, #2f2d2f;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 125px;
+    -fx-text-fill: #ffffff;
+    -fx-display-caret: false;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0, 1 0 0 0 ;
+    -fx-padding: 1 ;
+
+    -fx-alignment: center-right ;
+}
