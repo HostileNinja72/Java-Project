@@ -17,7 +17,6 @@ public class Main extends Application {
         primaryStage.centerOnScreen();
         primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.show();
-        primaryStage.hide();
     }
 
 
