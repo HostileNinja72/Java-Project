@@ -45,7 +45,6 @@ public class HomeController {
     @FXML
     void patients(ActionEvent event) {
 
-
     }
 
     @FXML
@@ -64,4 +63,3 @@ public class HomeController {
     }
 
 }
-
