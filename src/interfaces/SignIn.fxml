@@ -68,6 +68,11 @@
                            </font></Label>
                      </children>
                   </Pane>
+                  <ImageView fx:id="loading" fitHeight="57.0" fitWidth="65.0" layoutX="172.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/loading.gif" />
+                     </image>
+                  </ImageView>
                     </children>
                 </Pane>
             </children>

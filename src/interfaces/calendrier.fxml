@@ -1,25 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="558.0" prefWidth="769.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CalendrierController">
-    <children>
-        <AnchorPane layoutY="192.0" prefHeight="558.0" prefWidth="226.0" style="-fx-background-color: #00917C;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <children>
-                <JFXButton fx:id="PatientsButton" layoutX="20.0" layoutY="177.0" onAction="#patients" prefHeight="34.0" prefWidth="166.0" style="-fx-background-color: #00917C;" text="Patients" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="180.0" />
-                <JFXButton fx:id="CalendrierButton" layoutX="20.0" layoutY="232.0" onAction="#calendrier" prefHeight="34.0" prefWidth="166.0" style="-fx-background-color: #00917C;" text="Calendrier" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="230.0" />
-                <JFXButton fx:id="RdvButton" layoutX="20.0" layoutY="294.0" onAction="#rdv" prefHeight="34.0" prefWidth="206.0" style="-fx-background-color: #00917C;" text="Rendez-vous" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="280.0" />
-                <JFXButton fx:id="RapportsButton" layoutX="20.0" layoutY="355.0" onAction="#rapports" prefHeight="34.0" prefWidth="166.0" style="-fx-background-color: #00917C;" text="Rapports" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="330.0" />
-                <JFXButton fx:id="HistoriqueButton" layoutX="30.0" layoutY="416.0" onAction="#historique" prefHeight="34.0" prefWidth="166.0" style="-fx-background-color: #00917C;" text="Historique " AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="380.0" />
-                <JFXButton fx:id="PrmButton" layoutX="15.0" layoutY="478.0" onAction="#prm" prefHeight="34.0" prefWidth="206.0" style="-fx-background-color: #00917C;" text="Paramétres" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="430.0" />
-                <JFXButton fx:id="AcceuilBotton" layoutX="23.0" layoutY="68.0" onAction="#acceuil" prefHeight="78.0" prefWidth="180.0" style="-fx-background-color: #184D47;" text="Acceuil" textFill="WHITE">
-                    <font>
-                        <Font size="17.0" />
-                    </font>
-                </JFXButton>
-            </children>
-        </AnchorPane>
-    </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="558.0" prefWidth="543.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CalendrierController">
+   <children>
+      <Pane prefHeight="558.0" prefWidth="543.0" />
+   </children>
 </AnchorPane>
