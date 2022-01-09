@@ -1,12 +1,15 @@
 package controllers;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
+import javafx.scene.control.TableView;
+import javafx.stage.Stage;
 
 import java.sql.*;
 
 public class Utils {
-    public static void patients(ActionEvent event, String cIN, String nom, String prenom, Date birthDate){
+    public static void patients(ActionEvent event, String cIN, String nom, String prenom, JFXButton Enregistrer){
         Connection connection = null;
         PreparedStatement psInsert = null;
         PreparedStatement psCheckUserExists = null;
@@ -21,12 +24,13 @@ public class Utils {
                 alert.setContentText("Ce patients existe deja");
                 alert.show();
             }else{
-                psInsert = connection.prepareStatement("Insert INTO patients (CIN, Nom, Prenom, Date de Naissance VALUES (?, ? , ?, ?)");
+                psInsert = connection.prepareStatement("Insert INTO patients (CIN, Nom, Prenom) VALUES (?, ? , ?)");
                 psInsert.setString(1, cIN);
                 psInsert.setString(2, nom);
                 psInsert.setString(3, prenom);
-                psInsert.setDate(4, birthDate);
                 psInsert.executeUpdate();
+                Stage stage = (Stage) Enregistrer.getScene().getWindow();
+                stage.close();
             }
 
         } catch (SQLException e){
@@ -62,13 +66,13 @@ public class Utils {
             }
         }
     }
-    public static void ChercherPatient(ActionEvent event, String CIN){
+    public static void ChercherPatient(ActionEvent event, String CIN, TableView<?> patientsTable ){
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         try {
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/fxcabinet", "root", "Souf1234*");
-            preparedStatement = connection.prepareStatement("SELECT CIN, Nom, Prenom, Date de Naissance FROM patients WHERE CIN = ?");
+            preparedStatement = connection.prepareStatement("SELECT CIN, Nom, Prenom FROM patients WHERE CIN = ?");
             preparedStatement.setString(1, CIN);
             resultSet = preparedStatement.executeQuery();
             if(!resultSet.isBeforeFirst()){
@@ -81,7 +85,6 @@ public class Utils {
                     String retrieveCIN = resultSet.getString("CIN");
                     String retrieveNom = resultSet.getString("Nom");
                     String retrievePrenom = resultSet.getString("Prenom");
-                    Date retrieveBirthDate = resultSet.getDate("Date de Naissance");
                 }
             }
         } catch (SQLException e){

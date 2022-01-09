@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="428.0" prefWidth="509.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="428.0" prefWidth="509.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterPatController">
    <children>
       <Label layoutX="43.0" layoutY="41.0" prefHeight="49.0" prefWidth="104.0" text="Ajouter">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <TextField layoutX="43.0" layoutY="109.0" promptText="CIN" />
-      <TextField layoutX="43.0" layoutY="161.0" promptText="Prenom" />
-      <TextField layoutX="43.0" layoutY="214.0" promptText="Nom" />
-      <TextField layoutX="44.0" layoutY="264.0" promptText="Maladie" />
-      <TextField layoutX="43.0" layoutY="310.0" promptText="Etat" />
+      <TextField fx:id="tf_CIN" layoutX="43.0" layoutY="109.0" promptText="CIN" />
+      <TextField fx:id="tf_Prenom" layoutX="43.0" layoutY="161.0" promptText="Prenom" />
+      <TextField fx:id="tf_Nom" layoutX="43.0" layoutY="214.0" promptText="Nom" />
+      <TextField fx:id="tf_maladie" layoutX="44.0" layoutY="264.0" promptText="Maladie" />
+      <TextField fx:id="tf_Etat" layoutX="43.0" layoutY="310.0" promptText="Etat" />
+      <JFXButton fx:id="Enregistrer" layoutX="325.0" layoutY="187.0" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: white;" text="Enregistrer" textFill="#34df5c" />
    </children>
 </AnchorPane>

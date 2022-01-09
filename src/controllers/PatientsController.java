@@ -7,7 +7,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -19,6 +21,13 @@ public class PatientsController implements Initializable {
 
     @FXML
     private JFXButton AjouterPat;
+
+
+    @FXML
+    private TableView<?> patientsTable;
+
+    @FXML
+    private JFXButton searchButton;
 
     @FXML
     private DatePicker date_Birthdate;
@@ -48,6 +57,13 @@ public class PatientsController implements Initializable {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+
+            }
+        });
+        searchButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event)
+            {
 
             }
         });

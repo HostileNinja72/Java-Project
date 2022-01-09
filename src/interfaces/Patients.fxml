@@ -29,7 +29,7 @@
                   <Font name="System Italic" size="12.0" />
                </font>
             </TextField>
-            <TableView layoutX="14.0" layoutY="200.0" prefHeight="200.0" prefWidth="640.0">
+            <TableView fx:id="patientsTable" layoutX="14.0" layoutY="200.0" prefHeight="200.0" prefWidth="640.0">
               <columns>
                 <TableColumn prefWidth="64.00002861022949" text="CIN" />
                 <TableColumn prefWidth="86.39994049072266" text="Nom" />
@@ -40,7 +40,7 @@
                   <TableColumn prefWidth="61.59991455078125" text="Date de N" />
               </columns>
             </TableView>
-            <DatePicker fx:id="date_Birthdate" layoutX="450.0" layoutY="132.0" prefHeight="23.0" prefWidth="170.0" promptText="Date de Naissance" style="-fx-border-color: grey;" />
+            <DatePicker fx:id="date_Birthdate" layoutX="442.0" layoutY="66.0" prefHeight="23.0" prefWidth="170.0" promptText="Date de Naissance" style="-fx-border-color: grey;" />
             <JFXButton layoutX="226.0" layoutY="412.0" prefHeight="30.0" prefWidth="216.0" style="-fx-background-color: black;" text="Imprimer Rapport" textFill="WHITE" />
             <Label layoutX="26.0" layoutY="60.0" prefHeight="41.0" prefWidth="105.0" text="Rechercher">
                <font>
@@ -54,6 +54,7 @@
                   <JFXButton layoutX="392.0" layoutY="28.0" style="-fx-background-color: green;" text="Supprimer" />
                </children>
             </Pane>
+            <JFXButton fx:id="searchButton" layoutX="501.0" layoutY="148.0" style="-fx-background-color: black;" text="Chercher" />
          </children>
       </Pane>
    </children>
