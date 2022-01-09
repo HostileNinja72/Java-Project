@@ -31,9 +31,9 @@
             </TextField>
             <TableView fx:id="patientsTable" layoutX="14.0" layoutY="200.0" prefHeight="200.0" prefWidth="640.0">
               <columns>
-                <TableColumn prefWidth="64.00002861022949" text="CIN" />
-                <TableColumn prefWidth="86.39994049072266" text="Nom" />
-                  <TableColumn prefWidth="123.20001220703125" text="N Tel" />
+                <TableColumn fx:id="col_CIN" prefWidth="64.00002861022949" text="CIN" />
+                <TableColumn fx:id="col_Nom" prefWidth="86.39994049072266" text="Nom" />
+                  <TableColumn fx:id="col_Prenom" prefWidth="123.20001220703125" text="Prenom" />
                   <TableColumn prefWidth="96.800048828125" text="Maladie" />
                   <TableColumn prefWidth="90.39996337890625" text="Etat" />
                   <TableColumn prefWidth="115.19998168945312" text="Derniere visite" />

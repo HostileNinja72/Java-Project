@@ -113,4 +113,8 @@ public class Utils {
             }
         }
     }
+    public static Connection getConnection() throws SQLException{
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/fxcabinet", "root", "Souf1234*");
+        return connection;
+    }
 }
