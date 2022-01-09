@@ -5,17 +5,17 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="CalPane" prefHeight="558.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
+<AnchorPane fx:id="AccPane" prefHeight="558.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane layoutY="-1.0" prefHeight="474.0" prefWidth="668.0" style="-fx-background-color: #00917C;">
          <children>
-            <Pane layoutY="474.0" prefHeight="86.0" prefWidth="668.0" style="-fx-background-color: #18786a;" />
-            <Label layoutX="270.0" layoutY="79.0" prefHeight="72.0" prefWidth="257.0" style="-fx-background-color: INVISIBLE;" text="testing" textFill="WHITE">
+            <Label layoutX="270.0" layoutY="79.0" prefHeight="72.0" prefWidth="257.0" style="-fx-background-color: INVISIBLE;" text="Testing" textFill="WHITE">
                <font>
                   <Font size="25.0" />
                </font>
             </Label>
          </children>
       </Pane>
+      <Pane layoutY="472.0" prefHeight="86.0" prefWidth="668.0" style="-fx-background-color: #18786a;" />
    </children>
 </AnchorPane>
