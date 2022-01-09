@@ -91,31 +91,7 @@ public class HomeController implements Initializable {
 
     }
 
-    @FXML
-    void acceuil(ActionEvent event) {
 
-
-    }
-
-
-
-    @FXML
-    void historique(ActionEvent event) {
-
-    }
-
-
-
-    @FXML
-    void prm(ActionEvent event) {
-
-    }
-
-
-    @FXML
-    void rdv(ActionEvent event) {
-
-    }
 
 
 }
