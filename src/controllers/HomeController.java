@@ -2,6 +2,7 @@ package controllers;
 
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -15,6 +16,7 @@ public class HomeController implements Initializable {
 
     @FXML
     AnchorPane AccPane;
+    AnchorPane next;
     @FXML
     private JFXButton AcceuilBotton;
 
@@ -31,12 +33,61 @@ public class HomeController implements Initializable {
     private JFXButton PrmButton;
 
     @FXML
-    private JFXButton RapportsButton;
-
-    @FXML
     private JFXButton RdvButton;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        CalendrierButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    next = (AnchorPane) FXMLLoader.load(getClass().getResource("/interfaces/calendrier.fxml"));
+                    AccPane.getChildren().add(next);
+                    AnchorPane.setLeftAnchor(next, 0.0);
+                    next.toFront();
+                }
+
+                catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+        });
+        PatientsButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    next = (AnchorPane) FXMLLoader.load(getClass().getResource("/interfaces/Patients.fxml"));
+                    AccPane.getChildren().add(next);
+                    AnchorPane.setLeftAnchor(next, 0.0);
+                    next.toFront();
+                }
+
+                catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+        });
+        AcceuilBotton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    next = (AnchorPane) FXMLLoader.load(getClass().getResource("/interfaces/Home.fxml"));
+                    AccPane.getChildren().add(next);
+                    AnchorPane.setLeftAnchor(next, 0.0);
+                    next.toFront();
+                }
+
+                catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+        });
+
 
     }
 
@@ -46,33 +97,20 @@ public class HomeController implements Initializable {
 
     }
 
-    @FXML
-    void calendrier(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/interfaces/calendrier.fxml"));
-        AnchorPane CalPane = (AnchorPane) fxmlLoader.load();
-        AccPane.getChildren().clear();
-        AccPane.getChildren().add(CalPane);
-    }
+
 
     @FXML
     void historique(ActionEvent event) {
 
     }
 
-    @FXML
-    void patients(ActionEvent event) {
 
-    }
 
     @FXML
     void prm(ActionEvent event) {
 
     }
 
-    @FXML
-    void rapports(ActionEvent event) {
-
-    }
 
     @FXML
     void rdv(ActionEvent event) {

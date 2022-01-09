@@ -44,7 +44,7 @@ public class SignInController implements Initializable {
         if(password.equals("1234")){
             loading.setVisible(true);
             PauseTransition pt = new PauseTransition();
-            pt.setDuration(Duration.seconds(3));
+            pt.setDuration(Duration.seconds(1));
             pt.play();
             pt.setOnFinished(event1 -> {VBox.getScene().getWindow().hide();
                 Stage home = new Stage();

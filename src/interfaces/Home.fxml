@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="558.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfaces.Home">
+<AnchorPane prefHeight="558.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane layoutY="-1.0" prefHeight="474.0" prefWidth="668.0" style="-fx-background-color: #00917C;">
          <children>
