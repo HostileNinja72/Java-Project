@@ -4,11 +4,14 @@ import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class HomeController {
+public class HomeController implements Initializable {
 
     @FXML
     AnchorPane AccPane;
@@ -32,6 +35,10 @@ public class HomeController {
 
     @FXML
     private JFXButton RdvButton;
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
 
     @FXML
     void acceuil(ActionEvent event) {
@@ -71,5 +78,6 @@ public class HomeController {
     void rdv(ActionEvent event) {
 
     }
+
 
 }

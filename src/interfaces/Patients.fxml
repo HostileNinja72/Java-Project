@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="558.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfaces.Home">
+   <children>
+      <Pane layoutX="86.0" layoutY="140.0" prefHeight="558.0" prefWidth="668.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField layoutX="176.0" layoutY="65.0" style="-fx-background-color: white;" text="CIN">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="34.0" layoutY="130.0" style="-fx-background-color: white;" text="Nom">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="245.0" layoutY="130.0" style="-fx-background-color: white;" text="Prenom">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TableView layoutX="14.0" layoutY="200.0" prefHeight="200.0" prefWidth="640.0">
+              <columns>
+                <TableColumn prefWidth="64.00002861022949" text="CIN" />
+                <TableColumn prefWidth="86.39994049072266" text="Nom" />
+                  <TableColumn prefWidth="123.20001220703125" text="N Tel" />
+                  <TableColumn prefWidth="96.800048828125" text="Maladie" />
+                  <TableColumn prefWidth="90.39996337890625" text="Etat" />
+                  <TableColumn prefWidth="115.19998168945312" text="Derniere visite" />
+                  <TableColumn prefWidth="61.59991455078125" text="Age" />
+              </columns>
+            </TableView>
+            <Pane layoutY="472.0" prefHeight="86.0" prefWidth="668.0" style="-fx-background-color: #18786a;">
+               <children>
+                  <JFXButton layoutX="188.0" layoutY="28.0" prefHeight="30.0" prefWidth="64.0" style="-fx-background-color: green;" text="Ajouter" />
+                  <JFXButton layoutX="287.0" layoutY="28.0" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: green;" text="Modifier" />
+                  <JFXButton layoutX="392.0" layoutY="28.0" style="-fx-background-color: green;" text="Supprimer" />
+               </children>
+            </Pane>
+            <DatePicker layoutX="450.0" layoutY="132.0" prefHeight="23.0" prefWidth="170.0" promptText="Date de Naissance" style="-fx-background-color: White;" />
+            <JFXButton layoutX="226.0" layoutY="400.0" prefHeight="30.0" prefWidth="216.0" style="-fx-background-color: black;" text="Imprimer Rapport" />
+         </children>
+      </Pane>
+      <Label layoutX="65.0" layoutY="62.0" prefHeight="41.0" prefWidth="105.0" text="Rechercher">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
