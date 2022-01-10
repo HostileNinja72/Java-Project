@@ -56,22 +56,12 @@ public class PatientsController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        try {
-            Connection con = Utils.getConnection();
-            ResultSet rs = con.createStatement().executeQuery("select * from patients");
-
-            while (rs.next()){
-                oblist.add(new modelTable(rs.getString("CIN"), rs.getString("Nom"), rs.getString("Prenom")));
-            }
-        } catch (SQLException e){
-            e.printStackTrace();
-        }
 
         col_CIN.setCellValueFactory(new PropertyValueFactory<>("CIN"));
         col_Nom.setCellValueFactory(new PropertyValueFactory<>("Nom"));
         col_Prenom.setCellValueFactory(new PropertyValueFactory<>("Prenom"));
 
-        patientsTable.setItems(oblist);
+
 
         AjouterPat.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -88,6 +78,22 @@ public class PatientsController implements Initializable {
                     e.printStackTrace();
                 }
 
+            }
+        });
+        searchButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    Connection con = Utils.getConnection();
+                    ResultSet rs = con.createStatement().executeQuery("select * from patients");
+
+                    while (rs.next()){
+                        oblist.add(new modelTable(rs.getString("CIN"), rs.getString("Nom"), rs.getString("Prenom")));
+                    }
+                } catch (SQLException e){
+                    e.printStackTrace();
+                }
+                patientsTable.setItems(oblist);
             }
         });
 
