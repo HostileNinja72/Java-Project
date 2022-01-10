@@ -1,11 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="AccPane" prefHeight="558.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane layoutY="-1.0" prefHeight="474.0" prefWidth="668.0" style="-fx-background-color: #00917C;" />
+      <Pane layoutY="-1.0" prefHeight="474.0" prefWidth="668.0" style="-fx-background-color: #00917C;">
+         <children>
+            <Label layoutX="44.0" layoutY="22.0" prefHeight="61.0" prefWidth="141.0" text="Calendrier">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <HBox layoutX="23.0" layoutY="83.0" prefHeight="50.0" prefWidth="622.0" style="-fx-background-color: #597D35;" stylesheets="@../sample/App.css">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="73.0" style="-fx-background-color: INVISIBLE;" styleClass="dash_btn">
+                     <graphic>
+                        <ImageView fitHeight="47.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/up--v1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="78.0" style="-fx-background-color: INVISIBLE;" styleClass="dash_btn">
+                     <graphic>
+                        <ImageView fitHeight="47.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/down--v1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label prefHeight="55.0" prefWidth="161.0" text="Janvier 2022" textAlignment="CENTER">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children></Pane>
       <Pane layoutY="472.0" prefHeight="86.0" prefWidth="668.0" style="-fx-background-color: #18786a;" />
    </children>
 </AnchorPane>

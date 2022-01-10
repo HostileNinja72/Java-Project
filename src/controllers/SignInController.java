@@ -55,6 +55,7 @@ public class SignInController implements Initializable {
                 }
                 Scene scene = new Scene(fxml);
                 home.setScene(scene);
+                home.setResizable(false);
                 home.show();});
 
         }

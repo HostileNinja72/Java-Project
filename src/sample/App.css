@@ -22,3 +22,9 @@
 #textField {
     -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
 }
+.dash_btn:hover{
+-fx-background-color : INVISIBLE;
+-fx-text-fill : gray;
+-fx-border-color : #ffffff;
+-fx-border-width: 0px 0px 0px 4px;
+}

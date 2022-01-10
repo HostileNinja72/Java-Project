@@ -66,6 +66,9 @@ public class PatientsController implements Initializable {
         AjouterPat.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                for (int i = 0; i < patientsTable.getItems().size(); i++) {
+                    patientsTable.getItems().clear();
+                }
                 try {
                     FXMLLoader fxmlLoader = new FXMLLoader();
                     fxmlLoader.setLocation(getClass().getResource("/interfaces/AjouterPatients.fxml"));
