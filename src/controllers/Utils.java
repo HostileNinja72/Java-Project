@@ -30,7 +30,7 @@ public class Utils {
                 psInsert.setString(3, prenom);
                 psInsert.executeUpdate();
                 Stage stage = (Stage) Enregistrer.getScene().getWindow();
-                stage.close();
+                stage.close(); //hyyyyyyyyyy
             }
 
         } catch (SQLException e){
