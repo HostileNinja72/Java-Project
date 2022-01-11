@@ -162,6 +162,7 @@ public class CalendrierController implements Initializable {
             public void handle(ActionEvent event) {
                 date1.Up(date.getText());
                 date.setText(date1.mois);
+                dateAn.setText(String.valueOf(date1.annee));
 
             }
         });
@@ -169,7 +170,8 @@ public class CalendrierController implements Initializable {
             @Override
             public void handle(ActionEvent event) {
                 date1.Down(date.getText());
-            date.setText(date1.mois);
+                date.setText(date1.mois);
+                dateAn.setText(String.valueOf(date1.annee));
 
             }
         });

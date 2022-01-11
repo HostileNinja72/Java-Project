@@ -7,31 +7,38 @@ public class Date {
 
     Date(){
         mois = "Janvier";
-        annee = 2002;
+        annee = 2022;
     }
 
     public void Up(String mos){
-
+    boolean check = false;
         for (int i = 0; i < month.length; i++) {
             if (mos.equals("Decembre")){
                 mois = "Janvier";
-                annee++;
+                check = true;
             }
             else if (mos.equals(month[i])){
                 mois = month[i+1];
             }
         }
+        if (check){
+            annee++;
+        }
 
     }
     public void Down(String mos){
+        boolean check = false;
         for (int i = 0; i < month.length; i++){
             if (mos.equals("Janvier")){
                 mois =  "Decembre";
-                annee--;
+                check = true;
             }
             else if (mos.equals(month[i])){
                 mois = month[i-1];
             }
+        }
+        if (check){
+            annee--;
         }
 
     }
