@@ -44,9 +44,9 @@
 
 <VBox fx:id="VBox" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SignInController">
     <children>
-        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" styleClass="pane" stylesheets="@../sample/App.css" VBox.vgrow="ALWAYS">
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
             <children>
-                <Pane layoutX="14.0" layoutY="33.0" prefHeight="342.0" prefWidth="600.0" styleClass="pane" stylesheets="@../sample/App.css" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="33.0">
+                <Pane layoutX="14.0" layoutY="33.0" prefHeight="342.0" prefWidth="600.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="33.0">
                     <children>
                         <Label layoutX="51.0" layoutY="53.0" prefHeight="34.0" prefWidth="91.0" text="Bonjour" textFill="#035956">
                             <font>

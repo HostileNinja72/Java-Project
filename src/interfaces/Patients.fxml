@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -12,7 +11,7 @@
 
 <AnchorPane prefHeight="558.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PatientsController">
    <children>
-      <Pane layoutX="86.0" layoutY="140.0" prefHeight="558.0" prefWidth="668.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane layoutX="86.0" layoutY="140.0" prefHeight="558.0" prefWidth="668.0" style="-fx-background-color: #00917C;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <TextField fx:id="tf_CIN" layoutX="176.0" layoutY="65.0" promptText="CIN" style="-fx-border-color: grey;">
                <font>
@@ -40,7 +39,6 @@
                   <TableColumn prefWidth="61.59991455078125" text="Date de N" />
               </columns>
             </TableView>
-            <DatePicker fx:id="date_Birthdate" layoutX="442.0" layoutY="66.0" prefHeight="23.0" prefWidth="170.0" promptText="Date de Naissance" style="-fx-border-color: grey;" />
             <JFXButton layoutX="226.0" layoutY="412.0" prefHeight="30.0" prefWidth="216.0" style="-fx-background-color: black;" text="Imprimer Rapport" textFill="WHITE" />
             <Label layoutX="26.0" layoutY="60.0" prefHeight="41.0" prefWidth="105.0" text="Rechercher">
                <font>
@@ -49,12 +47,12 @@
             </Label>
             <Pane layoutY="472.0" prefHeight="86.0" prefWidth="668.0" style="-fx-background-color: #18786a;">
                <children>
-                  <JFXButton fx:id="AjouterPat" layoutX="188.0" layoutY="28.0" prefHeight="30.0" prefWidth="64.0" style="-fx-background-color: green;" text="Ajouter" />
-                  <JFXButton layoutX="287.0" layoutY="28.0" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: green;" text="Modifier" />
-                  <JFXButton layoutX="392.0" layoutY="28.0" style="-fx-background-color: green;" text="Supprimer" />
+                  <JFXButton fx:id="AjouterPat" layoutX="188.0" layoutY="28.0" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: green;" text="Ajouter" />
+                  <JFXButton layoutX="291.0" layoutY="28.0" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: green;" text="Modifier" />
+                  <JFXButton layoutX="392.0" layoutY="28.0" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: green;" text="Supprimer" />
                </children>
             </Pane>
-            <JFXButton fx:id="searchButton" layoutX="501.0" layoutY="148.0" style="-fx-background-color: black;" text="Chercher" />
+            <JFXButton fx:id="searchButton" layoutX="442.0" layoutY="130.0" style="-fx-background-color: black;" text="Chercher" textFill="WHITE" />
          </children>
       </Pane>
    </children>

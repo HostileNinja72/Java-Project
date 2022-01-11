@@ -10,7 +10,7 @@ import javafx.stage.StageStyle;
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("../interfaces/SignIn.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/interfaces/SignIn.fxml"));
         primaryStage.setTitle("Health care");
         primaryStage.setScene(new Scene(root, 640, 400));
         primaryStage.centerOnScreen();
