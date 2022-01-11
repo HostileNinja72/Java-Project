@@ -46,7 +46,8 @@ public class SignInController implements Initializable {
             PauseTransition pt = new PauseTransition();
             pt.setDuration(Duration.seconds(1));
             pt.play();
-            pt.setOnFinished(event1 -> {VBox.getScene().getWindow().hide();
+            pt.setOnFinished(event1 -> {
+                VBox.getScene().getWindow().hide();
                 Stage home = new Stage();
                 try {
                     fxml = FXMLLoader.load(getClass().getResource("/interfaces/sample.fxml"));

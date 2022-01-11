@@ -2,10 +2,13 @@ package controllers;
 
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.*;
 
 public class Utils {
@@ -117,4 +120,16 @@ public class Utils {
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/fxcabinet", "root", "Souf1234*");
         return connection;
     }
+    public static void VoirPatient(String Date) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Utils.class.getResource("/interfaces/AfficherPatients.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setTitle("New Window");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
+
 }
