@@ -6,11 +6,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableView;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDate;
+import java.util.Calendar;
 
 public class Utils {
     public static void patients(ActionEvent event, String cIN, String nom, String prenom, JFXButton Enregistrer){
@@ -33,7 +35,7 @@ public class Utils {
                 psInsert.setString(2, nom);
                 psInsert.setString(3, prenom);
                 psInsert.executeUpdate();
-                Stage stage = (Stage) Enregistrer.getScene().getWindow(); //nnnnnnnnn
+                Stage stage = (Stage) Enregistrer.getScene().getWindow();
                 stage.close();
             }
 
@@ -70,53 +72,7 @@ public class Utils {
             }
         }
     }
-    public static void ChercherPatient(ActionEvent event, String CIN, TableView<?> patientsTable ){
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
-        ResultSet resultSet = null;
-        try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/fxcabinet", "root", "Souf1234*");
-            preparedStatement = connection.prepareStatement("SELECT CIN, Nom, Prenom FROM patients WHERE CIN = ?");
-            preparedStatement.setString(1, CIN);
-            resultSet = preparedStatement.executeQuery();
-            if(!resultSet.isBeforeFirst()){
-                System.out.println("Ce patient n'exista pas");
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText(" veuillez ajouter ce utilisateur ou verifiez votre donnée ");
-                alert.show();
-            } else {
-                while(resultSet.next()){
-                    String retrieveCIN = resultSet.getString("CIN");
-                    String retrieveNom = resultSet.getString("Nom");
-                    String retrievePrenom = resultSet.getString("Prenom");
-                }
-            }
-        } catch (SQLException e){
-            e.printStackTrace();
-        }finally {
-            if (resultSet != null) {
-                try {
-                    resultSet.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-            if (preparedStatement != null){
-                try {
-                    preparedStatement.close();
-                } catch (SQLException e){
-                    e.printStackTrace();
-                }
-            }
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
+
     public static Connection getConnection() throws SQLException{
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/fxcabinet", "root", "Souf1234*");
         return connection;
@@ -131,6 +87,58 @@ public class Utils {
         stage.show();
     }
 
+    public static void SetNumbers(Text[] paths, Calendar calendar){
+        String[] months = {"Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre"};
+        String[] days = {"Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"};
+
+        if(days[calendar.get(Calendar.DAY_OF_WEEK)-1].equals("Lundi")){
+            for (int k=1, i = 6; i < paths.length ; i++) {
+                paths[i].setText(String.valueOf(k));
+                k++;
+            }
+        }
+        if(days[calendar.get(Calendar.DAY_OF_WEEK)-1].equals("Mardi")){
+            for (int k = 1, i = 0; i < paths.length ; i++) {
+                paths[i].setText(String.valueOf(k));
+                k++;
+            }
+        }
+        if(days[calendar.get(Calendar.DAY_OF_WEEK)-1].equals("Mercredi")){
+            for (int k = 1,i = 1; i < paths.length ; i++) {
+                paths[i].setText(String.valueOf(k));
+                k++;
+            }
+        }
+        if(days[calendar.get(Calendar.DAY_OF_WEEK)-1].equals("Jeudi")){
+            for (int k = 1, i = 2; i < paths.length ; i++) {
+                paths[i].setText(String.valueOf(k));
+                k++;
+            }
+        }
+        if(days[calendar.get(Calendar.DAY_OF_WEEK)-1].equals("Vendredi")){
+            for (int k = 1,i = 3; i < paths.length ; i++) {
+                paths[i].setText(String.valueOf(k));
+                k++;
+            }
+        }
+        if(days[calendar.get(Calendar.DAY_OF_WEEK)-1].equals("Samedi")){
+            for (int k = 1,i = 4; i < paths.length ; i++) {
+                paths[i].setText(String.valueOf(k));
+                k++;
+            }
+        }
+        if(days[calendar.get(Calendar.DAY_OF_WEEK)-1].equals("Dimanche")){
+            for (int k = 1,i = 5; i < paths.length ; i++) {
+                paths[i].setText(String.valueOf(k));
+                k++;
+            }
+        }
+    }
+    public static void DeleteCalendar(Text[] paths){
+        for (int i = 0; i < paths.length; i++) {
+            paths[i].setText("");
+        }
+    }
 
 
 }

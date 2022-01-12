@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.time.LocalTime;
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.ResourceBundle;
 
 public class CalendrierController implements Initializable {
@@ -245,19 +246,28 @@ public class CalendrierController implements Initializable {
 
 
 
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         String[] months = {"Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre"};
-
+        String[] days = {"Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"};
+        Text[] paths = new Text[]{text11, text12, text13, text14, text15, text16, text17, text21, text22, text23, text24, text25, text26, text27, text31, text32, text33, text34, text35, text36, text37, text41, text42, text43, text44, text45, text46, text47, text51, text52, text53 };
         Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.DAY_OF_MONTH, 1);
+        Utils.SetNumbers(paths, calendar);
+
+
+
         up.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                Utils.DeleteCalendar(paths);
                 calendar.add(Calendar.MONTH, 1);
+                calendar.set(Calendar.DAY_OF_MONTH, 1);
                 dateAn.setText(String.valueOf(calendar.get(Calendar.YEAR)));
                 date.setText(months[calendar.get(Calendar.MONTH)]);
 
-
+                Utils.SetNumbers(paths, calendar);
 
 
             }
@@ -265,9 +275,13 @@ public class CalendrierController implements Initializable {
         down.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                Utils.DeleteCalendar(paths);
                 calendar.add(Calendar.MONTH, -1);
+                calendar.set(Calendar.DAY_OF_MONTH, 1);
                 dateAn.setText(String.valueOf(calendar.get(Calendar.YEAR)));
                 date.setText(months[calendar.get(Calendar.MONTH)]);
+
+                Utils.SetNumbers(paths, calendar);
 
             }
         });

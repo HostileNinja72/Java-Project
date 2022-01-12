@@ -78,157 +78,157 @@
             </Label>
             <Button fx:id="calButton11" layoutX="23.0" layoutY="186.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text11" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+                  <Text fx:id="text11" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton12" layoutX="136.0" layoutY="186.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text12" strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
+                  <Text fx:id="text12" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton13" layoutX="249.0" layoutY="186.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text13" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
+                  <Text fx:id="text13" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton14" layoutX="362.0" layoutY="186.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text14" strokeType="OUTSIDE" strokeWidth="0.0" text="6" />
+                  <Text fx:id="text14" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton15" layoutX="475.0" layoutY="186.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text15" strokeType="OUTSIDE" strokeWidth="0.0" text="7" />
+                  <Text fx:id="text15" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton21" layoutX="23.0" layoutY="254.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text21" strokeType="OUTSIDE" strokeWidth="0.0" text="10" />
+                  <Text fx:id="text21" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton22" layoutX="136.0" layoutY="254.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text22" strokeType="OUTSIDE" strokeWidth="0.0" text="11" />
+                  <Text fx:id="text22" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton23" layoutX="249.0" layoutY="254.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text23" strokeType="OUTSIDE" strokeWidth="0.0" text="12" />
+                  <Text fx:id="text23" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton24" layoutX="362.0" layoutY="254.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text24" strokeType="OUTSIDE" strokeWidth="0.0" text="13" />
+                  <Text fx:id="text24" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton25" layoutX="475.0" layoutY="254.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text25" strokeType="OUTSIDE" strokeWidth="0.0" text="14" />
+                  <Text fx:id="text25" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton31" layoutX="23.0" layoutY="320.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text31" strokeType="OUTSIDE" strokeWidth="0.0" text="17" />
+                  <Text fx:id="text31" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton32" layoutX="136.0" layoutY="320.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text32" strokeType="OUTSIDE" strokeWidth="0.0" text="18" />
+                  <Text fx:id="text32" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton33" layoutX="249.0" layoutY="320.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text33" strokeType="OUTSIDE" strokeWidth="0.0" text="19" />
+                  <Text fx:id="text33" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton34" layoutX="362.0" layoutY="320.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text34" strokeType="OUTSIDE" strokeWidth="0.0" text="20" />
+                  <Text fx:id="text34" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton35" layoutX="475.0" layoutY="320.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text35" strokeType="OUTSIDE" strokeWidth="0.0" text="21" />
+                  <Text fx:id="text35" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton41" layoutX="23.0" layoutY="387.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text41" strokeType="OUTSIDE" strokeWidth="0.0" text="24" />
+                  <Text fx:id="text41" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton42" layoutX="136.0" layoutY="387.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text42" strokeType="OUTSIDE" strokeWidth="0.0" text="25" />
+                  <Text fx:id="text42" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton43" layoutX="249.0" layoutY="387.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text43" strokeType="OUTSIDE" strokeWidth="0.0" text="26" />
+                  <Text fx:id="text43" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton44" layoutX="362.0" layoutY="387.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text44" strokeType="OUTSIDE" strokeWidth="0.0" text="27" />
+                  <Text fx:id="text44" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton45" layoutX="475.0" layoutY="387.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text45" strokeType="OUTSIDE" strokeWidth="0.0" text="28" />
+                  <Text fx:id="text45" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton411" layoutX="23.0" layoutY="456.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text51" strokeType="OUTSIDE" strokeWidth="0.0" text="31" />
+                  <Text fx:id="text51" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton421" layoutX="136.0" layoutY="456.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text52" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+                  <Text fx:id="text52" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton431" layoutX="249.0" layoutY="456.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text53" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
+                  <Text fx:id="text53" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton16" layoutX="586.0" layoutY="186.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text16" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+                  <Text fx:id="text16" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton112" layoutX="586.0" layoutY="254.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text26" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+                  <Text fx:id="text26" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton1121" layoutX="586.0" layoutY="320.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text36" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+                  <Text fx:id="text36" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton113" layoutX="586.0" layoutY="387.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text46" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+                  <Text fx:id="text46" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton17" layoutX="697.0" layoutY="186.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text17" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+                  <Text fx:id="text17" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton1122" layoutX="697.0" layoutY="254.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text27" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+                  <Text fx:id="text27" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton11211" layoutX="697.0" layoutY="320.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text37" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+                  <Text fx:id="text37" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Button fx:id="calButton1131" layoutX="697.0" layoutY="387.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
                <graphic>
-                  <Text fx:id="text47" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+                  <Text fx:id="text47" strokeType="OUTSIDE" strokeWidth="0.0" />
                </graphic>
             </Button>
             <Label fx:id="vendredi1" layoutX="586.0" layoutY="148.0" prefHeight="38.0" prefWidth="104.0" text="Samedi">
@@ -241,6 +241,26 @@
                   <Font size="19.0" />
                </font>
             </Label>
+            <Button fx:id="calButton441" layoutX="360.0" layoutY="456.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
+               <graphic>
+                  <Text fx:id="text54" strokeType="OUTSIDE" strokeWidth="0.0" />
+               </graphic>
+            </Button>
+            <Button fx:id="calButton451" layoutX="473.0" layoutY="456.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
+               <graphic>
+                  <Text fx:id="text55" strokeType="OUTSIDE" strokeWidth="0.0" />
+               </graphic>
+            </Button>
+            <Button fx:id="calButton1132" layoutX="584.0" layoutY="456.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
+               <graphic>
+                  <Text fx:id="text56" strokeType="OUTSIDE" strokeWidth="0.0" />
+               </graphic>
+            </Button>
+            <Button fx:id="calButton11311" layoutX="695.0" layoutY="456.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="104.0" style="-fx-background-color: #18786a;">
+               <graphic>
+                  <Text fx:id="text57" strokeType="OUTSIDE" strokeWidth="0.0" />
+               </graphic>
+            </Button>
          </children></Pane>
       <Pane layoutY="541.0" prefHeight="86.0" prefWidth="226.0" style="-fx-background-color: #18786a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
    </children>
