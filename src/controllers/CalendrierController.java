@@ -8,10 +8,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import java.time.LocalDate;
 
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalTime;
+import java.util.Calendar;
 import java.util.ResourceBundle;
 
 public class CalendrierController implements Initializable {
@@ -21,6 +24,24 @@ public class CalendrierController implements Initializable {
 
     @FXML
     private Button calButton11;
+
+    @FXML
+    private Button calButton112;
+
+    @FXML
+    private Button calButton1121;
+
+    @FXML
+    private Button calButton11211;
+
+    @FXML
+    private Button calButton1122;
+
+    @FXML
+    private Button calButton113;
+
+    @FXML
+    private Button calButton1131;
 
     @FXML
     private Button calButton12;
@@ -33,6 +54,12 @@ public class CalendrierController implements Initializable {
 
     @FXML
     private Button calButton15;
+
+    @FXML
+    private Button calButton16;
+
+    @FXML
+    private Button calButton17;
 
     @FXML
     private Button calButton21;
@@ -68,10 +95,19 @@ public class CalendrierController implements Initializable {
     private Button calButton41;
 
     @FXML
+    private Button calButton411;
+
+    @FXML
     private Button calButton42;
 
     @FXML
+    private Button calButton421;
+
+    @FXML
     private Button calButton43;
+
+    @FXML
+    private Button calButton431;
 
     @FXML
     private Button calButton44;
@@ -83,7 +119,22 @@ public class CalendrierController implements Initializable {
     private Label date;
 
     @FXML
+    private Label dateAn;
+
+    @FXML
     private Button down;
+
+    @FXML
+    private Label jeudi;
+
+    @FXML
+    private Label lundi;
+
+    @FXML
+    private Label mardi;
+
+    @FXML
+    private Label mercredi;
 
     @FXML
     private Text text11;
@@ -101,6 +152,12 @@ public class CalendrierController implements Initializable {
     private Text text15;
 
     @FXML
+    private Text text16;
+
+    @FXML
+    private Text text17;
+
+    @FXML
     private Text text21;
 
     @FXML
@@ -114,6 +171,12 @@ public class CalendrierController implements Initializable {
 
     @FXML
     private Text text25;
+
+    @FXML
+    private Text text26;
+
+    @FXML
+    private Text text27;
 
     @FXML
     private Text text31;
@@ -131,6 +194,12 @@ public class CalendrierController implements Initializable {
     private Text text35;
 
     @FXML
+    private Text text36;
+
+    @FXML
+    private Text text37;
+
+    @FXML
     private Text text41;
 
     @FXML
@@ -146,32 +215,59 @@ public class CalendrierController implements Initializable {
     private Text text45;
 
     @FXML
+    private Text text46;
+
+    @FXML
+    private Text text47;
+
+    @FXML
+    private Text text51;
+
+    @FXML
+    private Text text52;
+
+    @FXML
+    private Text text53;
+
+    @FXML
     private Button up;
 
     @FXML
-    private Label dateAn;
+    private Label vendredi;
+
+    @FXML
+    private Label vendredi1;
+
+    @FXML
+    private Label vendredi11;
+
 
 
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Date date1 = new Date();
+        String[] months = {"Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre"};
+
+        Calendar calendar = Calendar.getInstance();
         up.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                date1.Up(date.getText());
-                date.setText(date1.mois);
-                dateAn.setText(String.valueOf(date1.annee));
+                calendar.add(Calendar.MONTH, 1);
+                dateAn.setText(String.valueOf(calendar.get(Calendar.YEAR)));
+                date.setText(months[calendar.get(Calendar.MONTH)]);
+
+
+
 
             }
         });
         down.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                date1.Down(date.getText());
-                date.setText(date1.mois);
-                dateAn.setText(String.valueOf(date1.annee));
+                calendar.add(Calendar.MONTH, -1);
+                dateAn.setText(String.valueOf(calendar.get(Calendar.YEAR)));
+                date.setText(months[calendar.get(Calendar.MONTH)]);
 
             }
         });

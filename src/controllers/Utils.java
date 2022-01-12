@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.*;
+import java.time.LocalDate;
 
 public class Utils {
     public static void patients(ActionEvent event, String cIN, String nom, String prenom, JFXButton Enregistrer){

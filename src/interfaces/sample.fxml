@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="558.0" prefWidth="894.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="1066.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
    <children>
-      <AnchorPane prefHeight="558.0" prefWidth="226.0" style="-fx-background-color: #00917C;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="628.0" prefWidth="226.0" style="-fx-background-color: #00917C;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <JFXButton fx:id="PatientsButton" buttonType="RAISED" layoutX="20.0" layoutY="177.0" prefHeight="34.0" prefWidth="166.0" style="-fx-background-color: #00917C;" text="Patients" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="180.0" />
             <JFXButton fx:id="CalendrierButton" buttonType="RAISED" layoutX="20.0" layoutY="228.0" prefHeight="34.0" prefWidth="166.0" style="-fx-background-color: #00917C;" text="Calendrier" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="228.0" />
@@ -20,12 +20,12 @@
                   <Font size="17.0" />
                </font>
             </JFXButton>
-            <Pane layoutY="472.0" prefHeight="86.0" prefWidth="226.0" style="-fx-background-color: #18786a;" />
+            <Pane layoutY="541.0" prefHeight="86.0" prefWidth="226.0" style="-fx-background-color: #18786a;" AnchorPane.bottomAnchor="0.0" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="AccPane" layoutX="226.0" prefHeight="558.0" prefWidth="668.0">
+      <AnchorPane fx:id="AccPane" layoutX="226.0" prefHeight="628.0" prefWidth="750.0">
          <children>
-            <Pane layoutY="-1.0" prefHeight="474.0" prefWidth="668.0" style="-fx-background-color: #00917C;">
+            <Pane prefHeight="542.0" prefWidth="840.0" style="-fx-background-color: #00917C;" AnchorPane.leftAnchor="0.0">
                <children>
                   <Label layoutX="270.0" layoutY="79.0" prefHeight="72.0" prefWidth="257.0" style="-fx-background-color: INVISIBLE;" text="Bienvenue Sur Health " textFill="WHITE">
                      <font>
@@ -39,7 +39,7 @@
                   </Label>
                </children>
             </Pane>
-            <Pane layoutY="472.0" prefHeight="86.0" prefWidth="668.0" style="-fx-background-color: #18786a;" />
+            <Pane layoutY="541.0" prefHeight="86.0" prefWidth="316.0" style="-fx-background-color: #18786a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
          </children>
       </AnchorPane>
    </children>
