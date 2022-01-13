@@ -1,7 +1,6 @@
 package controllers;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -166,252 +165,186 @@ public class CalendrierController implements Initializable {
 
 
 
-        up.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                Utils.DeleteCalendar(paths);
-                calendar.add(Calendar.MONTH, 1);
-                calendar.set(Calendar.DAY_OF_MONTH, 1);
-                dateAn.setText(String.valueOf(calendar.get(Calendar.YEAR)));
-                date.setText(months[calendar.get(Calendar.MONTH)]);
+        up.setOnAction(event -> {
+            Utils.DeleteCalendar(paths);
+            calendar.add(Calendar.MONTH, 1);
+            calendar.set(Calendar.DAY_OF_MONTH, 1);
+            dateAn.setText(String.valueOf(calendar.get(Calendar.YEAR)));
+            date.setText(months[calendar.get(Calendar.MONTH)]);
 
 
-                Utils.SetNumbers(paths, calendar);
+            Utils.SetNumbers(paths, calendar);
 
 
+        });
+        down.setOnAction(event -> {
+            Utils.DeleteCalendar(paths);
+            calendar.add(Calendar.MONTH, -1);
+            calendar.set(Calendar.DAY_OF_MONTH, 1);
+            dateAn.setText(String.valueOf(calendar.get(Calendar.YEAR)));
+            date.setText(months[calendar.get(Calendar.MONTH)]);
+
+            Utils.SetNumbers(paths, calendar);
+
+        });
+        calButton11.setOnAction(event -> {
+            try {
+                Utils.VoirPatient(text11.getText(), calendar);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        });
+        calButton12.setOnAction(event -> {
+            try {
+                Utils.VoirPatient(text12.getText(), calendar);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        });
+        calButton13.setOnAction(event -> {
+            try {
+                Utils.VoirPatient(text13.getText(), calendar);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         });
-        down.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                Utils.DeleteCalendar(paths);
-                calendar.add(Calendar.MONTH, -1);
-                calendar.set(Calendar.DAY_OF_MONTH, 1);
-                dateAn.setText(String.valueOf(calendar.get(Calendar.YEAR)));
-                date.setText(months[calendar.get(Calendar.MONTH)]);
-
-                Utils.SetNumbers(paths, calendar);
-
+        calButton14.setOnAction(event -> {
+            try {
+                Utils.VoirPatient(text14.getText(), calendar);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+
         });
-        calButton11.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Utils.VoirPatient(text11.getText());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+        calButton15.setOnAction(event -> {
+            try {
+                Utils.VoirPatient(text15.getText(), calendar);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
-            }
         });
-        calButton12.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Utils.VoirPatient(text11.getText());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+        calButton21.setOnAction(event -> {
+            try {
+                Utils.VoirPatient(text21.getText(), calendar);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
-            }
         });
-        calButton13.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Utils.VoirPatient(text11.getText());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+        calButton22.setOnAction(event -> {
+            try {
+                Utils.VoirPatient(text22.getText(), calendar);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        });
-        calButton14.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Utils.VoirPatient(text11.getText());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
 
-            }
         });
-        calButton15.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Utils.VoirPatient(text11.getText());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
+        calButton23.setOnAction(event -> {
+            try {
+                Utils.VoirPatient(text23.getText(),calendar);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+
         });
-        calButton21.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Utils.VoirPatient(text11.getText());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
+        calButton24.setOnAction(event -> {
+            try {
+                Utils.VoirPatient(text24.getText(), calendar);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+
         });
-        calButton22.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Utils.VoirPatient(text11.getText());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
+        calButton25.setOnAction(event -> {
+            try {
+                Utils.VoirPatient(text25.getText(), calendar);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+
         });
-        calButton23.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Utils.VoirPatient(text11.getText());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
+        calButton31.setOnAction(event -> {
+            try {
+                Utils.VoirPatient(text31.getText(), calendar);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+
         });
-        calButton24.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Utils.VoirPatient(text11.getText());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
+        calButton32.setOnAction(event -> {
+            try {
+                Utils.VoirPatient(text32.getText(), calendar);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+
         });
-        calButton25.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Utils.VoirPatient(text11.getText());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
+        calButton33.setOnAction(event -> {
+            try {
+                Utils.VoirPatient(text33.getText(), calendar);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+
         });
-        calButton31.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Utils.VoirPatient(text11.getText());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
+        calButton34.setOnAction(event -> {
+            try {
+                Utils.VoirPatient(text34.getText(), calendar);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+
         });
-        calButton32.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Utils.VoirPatient(text11.getText());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
+        calButton35.setOnAction(event -> {
+            try {
+                Utils.VoirPatient(text35.getText(), calendar);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+
         });
-        calButton33.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Utils.VoirPatient(text11.getText());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
+        calButton41.setOnAction(event -> {
+            try {
+                Utils.VoirPatient(text41.getText(), calendar);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+
         });
-        calButton34.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Utils.VoirPatient(text11.getText());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
+        calButton42.setOnAction(event -> {
+            try {
+                Utils.VoirPatient(text42.getText(), calendar);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+
         });
-        calButton35.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Utils.VoirPatient(text11.getText());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
+        calButton43.setOnAction(event -> {
+            try {
+                Utils.VoirPatient(text43.getText(), calendar);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+
         });
-        calButton41.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Utils.VoirPatient(text11.getText());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
+        calButton44.setOnAction(event -> {
+            try {
+                Utils.VoirPatient(text44.getText(), calendar);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
+
         });
-        calButton42.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Utils.VoirPatient(text11.getText());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
+        calButton45.setOnAction(event -> {
+            try {
+                Utils.VoirPatient(text45.getText(), calendar);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        });
-        calButton43.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Utils.VoirPatient(text11.getText());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
 
-            }
-        });
-        calButton44.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Utils.VoirPatient(text11.getText());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-            }
-        });
-        calButton45.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    Utils.VoirPatient(text11.getText());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-            }
         });
     }
 }

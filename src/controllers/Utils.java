@@ -76,7 +76,9 @@ public class Utils {
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/fxcabinet", "root", "Souf1234*");
         return connection;
     }
-    public static void VoirPatient(String Date) throws IOException {
+    public static void VoirPatient(String Date, Calendar calendar) throws IOException {
+        AfficherPatientsCal.date = Date;
+        AfficherPatientsCal.calendar = calendar;
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Utils.class.getResource("/interfaces/AfficherPatients.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
@@ -87,14 +89,13 @@ public class Utils {
     }
 
     public static void SetNumbers(Text[] paths, Calendar calendar){
-        String[] months = {"Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre"};
         String[] days = {"Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"};
 
         if(days[calendar.get(Calendar.DAY_OF_WEEK)-1].equals("Lundi")){
             for (int k=1, i = 6; i < paths.length ; i++) {
                 paths[i].setText(String.valueOf(k));
                 k++;
-                if (k > 30) break;
+                if (k > calendar.getActualMaximum(Calendar.DAY_OF_MONTH)) break;
 
             }
         }
@@ -142,8 +143,8 @@ public class Utils {
         }
     }
     public static void DeleteCalendar(Text[] paths){
-        for (int i = 0; i < paths.length; i++) {
-            paths[i].setText("");
+        for (Text path : paths) {
+            path.setText("");
         }
     }
 

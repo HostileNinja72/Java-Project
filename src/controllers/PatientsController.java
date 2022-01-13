@@ -81,46 +81,43 @@ public class PatientsController implements Initializable {
 
             }
         });
-        searchButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                if(tf_CIN.getText().equals("") && tf_Nom.getText().equals("") && tf_Prenom.getText().equals("")) {
-                    try {
-                        Utils.DeleteTable(patientsTable);
-                        Connection con = Utils.getConnection();
-                        ResultSet rs = con.createStatement().executeQuery("select * from patients");
-
-                        while (rs.next()) {
-                            oblist.add(new modelTable(rs.getString("CIN"), rs.getString("Nom"), rs.getString("Prenom")));
-                        }
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    }
-                    patientsTable.setItems(oblist);
-                }
-                else if (!tf_CIN.getText().equals("") || !tf_Nom.getText().equals("") || !tf_Prenom.getText().equals("")){
+        searchButton.setOnAction(event -> {
+            if(tf_CIN.getText().equals("") && tf_Nom.getText().equals("") && tf_Prenom.getText().equals("")) {
+                try {
                     Utils.DeleteTable(patientsTable);
-                    try {
-                        Connection con = Utils.getConnection();
-                        String Q = null;
-                        if(!tf_CIN.getText().equals("") && !tf_Nom.getText().equals("") && !tf_Prenom.getText().equals("") ){Q = "select * from patients where CIN = '" + tf_CIN.getText() + "' && Nom = '" + tf_Nom.getText() +"' && Prenom ='" +tf_Prenom.getText() +"'" ;}
-                        else if(!tf_CIN.getText().equals("") && !tf_Nom.getText().equals("")){Q = "select * from patients where CIN = '" + tf_CIN.getText() + "' && Nom = '" + tf_Nom.getText() +"'";}
-                        else if(!tf_CIN.getText().equals("") && !tf_Prenom.getText().equals("")){Q = "select * from patients where CIN = '" + tf_CIN.getText() + "' && Prenom = '" + tf_Prenom.getText() +"'";}
-                        else if(!tf_Prenom.getText().equals("") && !tf_Nom.getText().equals("")){Q = "select * from patients where Prenom = '" + tf_Prenom.getText() + "' && Nom = '" + tf_Nom.getText() +"'";}
-                        else if(!tf_CIN.getText().equals("")){Q = "select * from patients where CIN = '" + tf_CIN.getText() + "'";}
-                        else if(!tf_Nom.getText().equals("")){Q = "select * from patients where Nom = '" + tf_Nom.getText() + "'";}
-                        else if(!tf_Prenom.getText().equals("")){Q = "select * from patients where Prenom = '" + tf_Prenom.getText() + "'";}
-                        ResultSet rs = con.createStatement().executeQuery(Q);
-                        while (rs.next()) {
-                            oblist.add(new modelTable(rs.getString("CIN"), rs.getString("Nom"), rs.getString("Prenom")));
-                        }
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    }
-                    patientsTable.setItems(oblist);
-                }
+                    Connection con = Utils.getConnection();
+                    ResultSet rs = con.createStatement().executeQuery("select * from patients");
 
+                    while (rs.next()) {
+                        oblist.add(new modelTable(rs.getString("CIN"), rs.getString("Nom"), rs.getString("Prenom")));
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                patientsTable.setItems(oblist);
             }
+            else if (!tf_CIN.getText().equals("") || !tf_Nom.getText().equals("") || !tf_Prenom.getText().equals("")){
+                Utils.DeleteTable(patientsTable);
+                try {
+                    Connection con = Utils.getConnection();
+                    String Q = null;
+                    if(!tf_CIN.getText().equals("") && !tf_Nom.getText().equals("") && !tf_Prenom.getText().equals("") ){Q = "select * from patients where CIN = '" + tf_CIN.getText() + "' && Nom = '" + tf_Nom.getText() +"' && Prenom ='" +tf_Prenom.getText() +"'" ;}
+                    else if(!tf_CIN.getText().equals("") && !tf_Nom.getText().equals("")){Q = "select * from patients where CIN = '" + tf_CIN.getText() + "' && Nom = '" + tf_Nom.getText() +"'";}
+                    else if(!tf_CIN.getText().equals("") && !tf_Prenom.getText().equals("")){Q = "select * from patients where CIN = '" + tf_CIN.getText() + "' && Prenom = '" + tf_Prenom.getText() +"'";}
+                    else if(!tf_Prenom.getText().equals("") && !tf_Nom.getText().equals("")){Q = "select * from patients where Prenom = '" + tf_Prenom.getText() + "' && Nom = '" + tf_Nom.getText() +"'";}
+                    else if(!tf_CIN.getText().equals("")){Q = "select * from patients where CIN = '" + tf_CIN.getText() + "'";}
+                    else if(!tf_Nom.getText().equals("")){Q = "select * from patients where Nom = '" + tf_Nom.getText() + "'";}
+                    else if(!tf_Prenom.getText().equals("")){Q = "select * from patients where Prenom = '" + tf_Prenom.getText() + "'";}
+                    ResultSet rs = con.createStatement().executeQuery(Q);
+                    while (rs.next()) {
+                        oblist.add(new modelTable(rs.getString("CIN"), rs.getString("Nom"), rs.getString("Prenom")));
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                patientsTable.setItems(oblist);
+            }
+
         });
 
     }
