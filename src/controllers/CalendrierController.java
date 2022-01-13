@@ -8,14 +8,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
-import java.time.LocalDate;
+
 
 
 import java.io.IOException;
 import java.net.URL;
-import java.time.LocalTime;
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.ResourceBundle;
 
 public class CalendrierController implements Initializable {
@@ -138,97 +136,7 @@ public class CalendrierController implements Initializable {
     private Label mercredi;
 
     @FXML
-    private Text text11;
-
-    @FXML
-    private Text text12;
-
-    @FXML
-    private Text text13;
-
-    @FXML
-    private Text text14;
-
-    @FXML
-    private Text text15;
-
-    @FXML
-    private Text text16;
-
-    @FXML
-    private Text text17;
-
-    @FXML
-    private Text text21;
-
-    @FXML
-    private Text text22;
-
-    @FXML
-    private Text text23;
-
-    @FXML
-    private Text text24;
-
-    @FXML
-    private Text text25;
-
-    @FXML
-    private Text text26;
-
-    @FXML
-    private Text text27;
-
-    @FXML
-    private Text text31;
-
-    @FXML
-    private Text text32;
-
-    @FXML
-    private Text text33;
-
-    @FXML
-    private Text text34;
-
-    @FXML
-    private Text text35;
-
-    @FXML
-    private Text text36;
-
-    @FXML
-    private Text text37;
-
-    @FXML
-    private Text text41;
-
-    @FXML
-    private Text text42;
-
-    @FXML
-    private Text text43;
-
-    @FXML
-    private Text text44;
-
-    @FXML
-    private Text text45;
-
-    @FXML
-    private Text text46;
-
-    @FXML
-    private Text text47;
-
-    @FXML
-    private Text text51;
-
-    @FXML
-    private Text text52;
-
-    @FXML
-    private Text text53;
+    private Text text11, text12, text13, text14, text15, text16, text17, text21, text22, text23, text24, text25, text26, text27, text31, text32, text33, text34, text35, text36, text37, text41, text42, text43, text44, text45, text46, text47, text51, text52, text53, text54, text55, text56, text57;
 
     @FXML
     private Button up;
@@ -251,7 +159,7 @@ public class CalendrierController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         String[] months = {"Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre"};
         String[] days = {"Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"};
-        Text[] paths = new Text[]{text11, text12, text13, text14, text15, text16, text17, text21, text22, text23, text24, text25, text26, text27, text31, text32, text33, text34, text35, text36, text37, text41, text42, text43, text44, text45, text46, text47, text51, text52, text53 };
+        Text[] paths = new Text[]{text11, text12, text13, text14, text15, text16, text17, text21, text22, text23, text24, text25, text26, text27, text31, text32, text33, text34, text35, text36, text37, text41, text42, text43, text44, text45, text46, text47, text51, text52, text53, text54, text55, text56, text57 };
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.DAY_OF_MONTH, 1);
         Utils.SetNumbers(paths, calendar);
@@ -266,6 +174,7 @@ public class CalendrierController implements Initializable {
                 calendar.set(Calendar.DAY_OF_MONTH, 1);
                 dateAn.setText(String.valueOf(calendar.get(Calendar.YEAR)));
                 date.setText(months[calendar.get(Calendar.MONTH)]);
+
 
                 Utils.SetNumbers(paths, calendar);
 

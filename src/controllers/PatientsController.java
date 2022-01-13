@@ -66,9 +66,7 @@ public class PatientsController implements Initializable {
         AjouterPat.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                for (int i = 0; i < patientsTable.getItems().size(); i++) {
-                    patientsTable.getItems().clear();
-                }
+                Utils.DeleteTable(patientsTable);
                 try {
                     FXMLLoader fxmlLoader = new FXMLLoader();
                     fxmlLoader.setLocation(getClass().getResource("/interfaces/AjouterPatients.fxml"));
@@ -88,9 +86,7 @@ public class PatientsController implements Initializable {
             public void handle(ActionEvent event) {
                 if(tf_CIN.getText().equals("") && tf_Nom.getText().equals("") && tf_Prenom.getText().equals("")) {
                     try {
-                        for (int i = 0; i < patientsTable.getItems().size(); i++) {
-                            patientsTable.getItems().clear();
-                        }
+                        Utils.DeleteTable(patientsTable);
                         Connection con = Utils.getConnection();
                         ResultSet rs = con.createStatement().executeQuery("select * from patients");
 
@@ -103,9 +99,7 @@ public class PatientsController implements Initializable {
                     patientsTable.setItems(oblist);
                 }
                 else if (!tf_CIN.getText().equals("") || !tf_Nom.getText().equals("") || !tf_Prenom.getText().equals("")){
-                    for (int i = 0; i < patientsTable.getItems().size(); i++) {
-                        patientsTable.getItems().clear();
-                    }
+                    Utils.DeleteTable(patientsTable);
                     try {
                         Connection con = Utils.getConnection();
                         String Q = null;

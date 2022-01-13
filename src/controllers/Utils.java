@@ -10,8 +10,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.*;
-import java.time.LocalDate;
+import java.sql.*;;
 import java.util.Calendar;
 
 public class Utils {
@@ -95,48 +94,62 @@ public class Utils {
             for (int k=1, i = 6; i < paths.length ; i++) {
                 paths[i].setText(String.valueOf(k));
                 k++;
+                if (k > 30) break;
+
             }
         }
         if(days[calendar.get(Calendar.DAY_OF_WEEK)-1].equals("Mardi")){
             for (int k = 1, i = 0; i < paths.length ; i++) {
                 paths[i].setText(String.valueOf(k));
                 k++;
+                if (k > calendar.getActualMaximum(Calendar.DAY_OF_MONTH)) break;
             }
         }
         if(days[calendar.get(Calendar.DAY_OF_WEEK)-1].equals("Mercredi")){
             for (int k = 1,i = 1; i < paths.length ; i++) {
                 paths[i].setText(String.valueOf(k));
                 k++;
+                if (k > calendar.getActualMaximum(Calendar.DAY_OF_MONTH)) break;
             }
         }
         if(days[calendar.get(Calendar.DAY_OF_WEEK)-1].equals("Jeudi")){
             for (int k = 1, i = 2; i < paths.length ; i++) {
                 paths[i].setText(String.valueOf(k));
                 k++;
+                if (k > calendar.getActualMaximum(Calendar.DAY_OF_MONTH)) break;
             }
         }
         if(days[calendar.get(Calendar.DAY_OF_WEEK)-1].equals("Vendredi")){
             for (int k = 1,i = 3; i < paths.length ; i++) {
                 paths[i].setText(String.valueOf(k));
                 k++;
+                if (k > calendar.getActualMaximum(Calendar.DAY_OF_MONTH)) break;
             }
         }
         if(days[calendar.get(Calendar.DAY_OF_WEEK)-1].equals("Samedi")){
             for (int k = 1,i = 4; i < paths.length ; i++) {
                 paths[i].setText(String.valueOf(k));
                 k++;
+                if (k > calendar.getActualMaximum(Calendar.DAY_OF_MONTH)) break;
             }
         }
         if(days[calendar.get(Calendar.DAY_OF_WEEK)-1].equals("Dimanche")){
             for (int k = 1,i = 5; i < paths.length ; i++) {
                 paths[i].setText(String.valueOf(k));
                 k++;
+                if (k > calendar.getActualMaximum(Calendar.DAY_OF_MONTH)) break;
             }
         }
     }
     public static void DeleteCalendar(Text[] paths){
         for (int i = 0; i < paths.length; i++) {
             paths[i].setText("");
+        }
+    }
+
+    public static void DeleteTable( TableView<modelTable> patientsTable){
+        for (int i = 0; i < patientsTable.getItems().size(); i++) {
+            patientsTable.getItems().clear();
         }
     }
 
