@@ -26,6 +26,12 @@ public class PatientsController implements Initializable {
     private JFXButton AjouterPat;
 
     @FXML
+    private JFXButton SupprPatient;
+
+    @FXML
+    private JFXButton ModifierPatient;
+
+    @FXML
     private TableColumn<modelTable, String> col_CIN;
 
     @FXML
@@ -64,6 +70,35 @@ public class PatientsController implements Initializable {
 
 
         AjouterPat.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                Utils.DeleteTable(patientsTable);
+                try {
+                    FXMLLoader fxmlLoader = new FXMLLoader();
+                    fxmlLoader.setLocation(getClass().getResource("/interfaces/AjouterPatients.fxml"));
+                    Scene scene = new Scene(fxmlLoader.load());
+                    Stage stage = new Stage();
+                    stage.setTitle("New Window");
+                    stage.setScene(scene);
+                    stage.show();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+        SupprPatient.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                Utils.SupprimerPatient(patientsTable.getSelectionModel().getSelectedItem().getCIN());
+                System.out.println(patientsTable.getSelectionModel().getSelectedItem().getCIN());
+                patientsTable.getItems().removeAll(patientsTable.getSelectionModel().getSelectedItem());
+
+
+
+            }
+        });
+        ModifierPatient.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 Utils.DeleteTable(patientsTable);

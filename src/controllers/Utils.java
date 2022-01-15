@@ -10,7 +10,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.*;;
+import java.sql.*;
 import java.util.Calendar;
 
 public class Utils {
@@ -20,7 +20,7 @@ public class Utils {
         PreparedStatement psCheckUserExists = null;
         ResultSet resultSet = null;
         try{
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/fxcabinet", "root", "Souf1234*");
+            connection = Utils.getConnection();
             psCheckUserExists = connection.prepareStatement("SELECT * FROM patients WHERE CIN = ?");
             psCheckUserExists.setString(1, cIN);
             resultSet = psCheckUserExists.executeQuery();
@@ -72,9 +72,9 @@ public class Utils {
         }
     }
 
+
     public static Connection getConnection() throws SQLException{
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/fxcabinet", "root", "Souf1234*");
-        return connection;
+        return DriverManager.getConnection("jdbc:mysql://localhost:3306/fxcabinet", "root", "Souf1234*");
     }
     public static void VoirPatient(String Date, Calendar calendar) throws IOException {
         AfficherPatientsCal.date = Date;
@@ -152,6 +152,35 @@ public class Utils {
     public static void DeleteTable( TableView<modelTable> patientsTable){
         for (int i = 0; i < patientsTable.getItems().size(); i++) {
             patientsTable.getItems().clear();
+        }
+    }
+
+    public static void SupprimerPatient(String CIN){
+        Connection con = null;
+        PreparedStatement Deletepatient= null;
+        try{
+            con = Utils.getConnection();
+            Deletepatient = con.prepareStatement("DELETE FROM patients WHERE CIN = ?");
+            Deletepatient.setString(1, CIN);
+            Deletepatient.executeUpdate();
+        } catch (SQLException e){
+            e.printStackTrace();
+        }finally {
+            if (Deletepatient != null){
+                try {
+                   Deletepatient.close();
+                } catch (SQLException e){
+                    e.printStackTrace();
+                }
+            }
+            if (con != null){
+                try {
+                    con.close();
+                } catch (SQLException e){
+                    e.printStackTrace();
+                }
+            }
+
         }
     }
 
