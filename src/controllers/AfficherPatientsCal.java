@@ -18,6 +18,7 @@ import java.util.ResourceBundle;
 public class AfficherPatientsCal implements Initializable {
     public static String date;
     public static Calendar calendar;
+    public static String day;
 
     @FXML
     private TableColumn<Table, String> CIN_col;
@@ -44,12 +45,11 @@ public class AfficherPatientsCal implements Initializable {
         time_Col.setCellValueFactory(new PropertyValueFactory<>("Time"));
         try {
             Connection con = Utils.getConnection();
-            ResultSet rs = con.createStatement().executeQuery("select * from rdv");
-            ResultSet rs1 = con.createStatement().executeQuery("SELECT patients.Nom, patients.Prenom from rdv join patients on rdv.CIN = patients.CIN");
+            ResultSet rs = con.createStatement().executeQuery("Select patients.CIN, patients.Nom, patients.Prenom , RDV_time from rdv join patients on rdv.CIN = patients.CIN where RDV_Date = '" + String.valueOf(calendar.get(Calendar.YEAR)) + "-" + (calendar.get(Calendar.MONTH)+1) + "-" + day +"'" );
 
 
-            while (rs.next() && rs1.next()) {
-                oblist1.add(new Table(rs.getString("CIN"),rs1.getString("Nom"), rs1.getString("Prenom"), rs.getTime("RDV_time").toString()));
+            while (rs.next()) {
+                oblist1.add(new Table(rs.getString("CIN"),rs.getString("Nom"), rs.getString("Prenom"), rs.getTime("RDV_time").toString()));
             }
 
 

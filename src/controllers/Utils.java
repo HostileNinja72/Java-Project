@@ -79,6 +79,7 @@ public class Utils {
     public static void VoirPatient(String Date, Calendar calendar) throws IOException {
         AfficherPatientsCal.date = Date;
         AfficherPatientsCal.calendar = calendar;
+        AfficherPatientsCal.day = Date;
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(Utils.class.getResource("/interfaces/AfficherPatients.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
