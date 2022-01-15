@@ -47,7 +47,7 @@ public class Utils {
                 } catch (SQLException e){
                     e.printStackTrace();
                 }
-            }
+            } 
             if (psCheckUserExists != null){
                 try {
                     psCheckUserExists.close();

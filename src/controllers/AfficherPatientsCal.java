@@ -45,10 +45,11 @@ public class AfficherPatientsCal implements Initializable {
         try {
             Connection con = Utils.getConnection();
             ResultSet rs = con.createStatement().executeQuery("select * from rdv");
+            ResultSet rs1 = con.createStatement().executeQuery("SELECT patients.Nom, patients.Prenom from rdv join patients on rdv.CIN = patients.CIN");
 
 
-            while (rs.next()) {
-                oblist1.add(new Table(rs.getString("CIN"),null, null, rs.getTime("RDV_time").toString()));
+            while (rs.next() && rs1.next()) {
+                oblist1.add(new Table(rs.getString("CIN"),rs1.getString("Nom"), rs1.getString("Prenom"), rs.getTime("RDV_time").toString()));
             }
 
 
