@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -12,6 +13,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.*;
 import java.util.Calendar;
+import java.util.Optional;
 
 public class Utils {
     public static void patients(ActionEvent event, String cIN, String nom, String prenom, JFXButton Enregistrer){
@@ -25,9 +27,7 @@ public class Utils {
             psCheckUserExists.setString(1, cIN);
             resultSet = psCheckUserExists.executeQuery();
             if(resultSet.isBeforeFirst()) {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("Ce patients existe deja");
-                alert.show();
+                Utils.Error("Ce patients existe deja");
             }else{
                 psInsert = connection.prepareStatement("Insert INTO patients (CIN, Nom, Prenom) VALUES (?, ? , ?)");
                 psInsert.setString(1, cIN);
@@ -158,17 +158,60 @@ public class Utils {
     public static void SupprimerPatient(String CIN){
         Connection con = null;
         PreparedStatement Deletepatient= null;
+        PreparedStatement CheckUserAppoint = null;
+        ResultSet resultSet = null;
+
+
         try{
             con = Utils.getConnection();
             Deletepatient = con.prepareStatement("DELETE FROM patients WHERE CIN = ?");
-            Deletepatient.setString(1, CIN);
-            Deletepatient.executeUpdate();
+
+            CheckUserAppoint = con.prepareStatement("Select * from rdv where CIN = ?");
+            CheckUserAppoint.setString(1, CIN);
+
+            resultSet = CheckUserAppoint.executeQuery();
+
+            if(resultSet.isBeforeFirst()){
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setHeaderText("Ce patient a deja un rdv, etes vous sure de le supprimer?");
+
+                Optional<ButtonType> option = alert.showAndWait();
+
+                if (option.get() == ButtonType.OK){
+                    Deletepatient.setString(1, CIN);
+                    Deletepatient.executeUpdate();
+                }
+                else if (option.get() == ButtonType.CANCEL){
+                    alert.close();
+                }
+
+            }
+            else{
+                Deletepatient.setString(1, CIN);
+                Deletepatient.executeUpdate();
+            }
+
         } catch (SQLException e){
             e.printStackTrace();
         }finally {
+            if(resultSet != null){
+                try {
+                    resultSet.close();
+                } catch (SQLException e){
+                    e.printStackTrace();
+                }
+
+            }
             if (Deletepatient != null){
                 try {
                    Deletepatient.close();
+                } catch (SQLException e){
+                    e.printStackTrace();
+                }
+            }
+            if (CheckUserAppoint != null){
+                try {
+                    CheckUserAppoint.close();
                 } catch (SQLException e){
                     e.printStackTrace();
                 }
@@ -182,6 +225,11 @@ public class Utils {
             }
 
         }
+    }
+    public static void Error(String message){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setContentText(message);
+        alert.show();
     }
 
 

@@ -43,9 +43,7 @@ public class AjouterPatController implements Initializable {
                 Utils.patients(event, tf_CIN.getText(), tf_Nom.getText(), tf_Prenom.getText(), Enregistrer);
 
             } else {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText(" Merci d'entrer tout les informations ");
-                alert.show();
+               Utils.Error("Merci d'entrer toute les infromations");
             }
         });
 

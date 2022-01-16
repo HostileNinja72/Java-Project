@@ -47,9 +47,6 @@ public class PatientsController implements Initializable {
     private JFXButton searchButton;
 
     @FXML
-    private DatePicker date_Birthdate;
-
-    @FXML
     private TextField tf_CIN;
 
     @FXML
@@ -91,9 +88,7 @@ public class PatientsController implements Initializable {
             @Override
             public void handle(ActionEvent event) {
                 Utils.SupprimerPatient(patientsTable.getSelectionModel().getSelectedItem().getCIN());
-                System.out.println(patientsTable.getSelectionModel().getSelectedItem().getCIN());
                 patientsTable.getItems().removeAll(patientsTable.getSelectionModel().getSelectedItem());
-
 
 
             }
@@ -113,7 +108,6 @@ public class PatientsController implements Initializable {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
             }
         });
         searchButton.setOnAction(event -> {
