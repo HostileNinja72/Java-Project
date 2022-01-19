@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="628.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="628.0" prefWidth="840.0" style="-fx-background-color: #00917C;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane layoutY="-1.0" prefHeight="546.0" prefWidth="750.0" style="-fx-background-color: #00917C;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane layoutY="-1.0" prefHeight="610.0" prefWidth="840.0" style="-fx-background-color: #00917C;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label layoutX="270.0" layoutY="79.0" prefHeight="72.0" prefWidth="257.0" style="-fx-background-color: INVISIBLE;" text="Bienvenue Sur Health " textFill="WHITE">
                <font>
@@ -21,6 +21,6 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutY="551.0" prefHeight="86.0" prefWidth="226.0" style="-fx-background-color: #18786a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Pane layoutY="551.0" prefHeight="18.0" prefWidth="840.0" style="-fx-background-color: #18786a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
    </children>
 </AnchorPane>

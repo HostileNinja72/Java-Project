@@ -42,9 +42,9 @@ public class PatientsController implements Initializable {
 
     @FXML
     private TableView<modelTable> patientsTable;
-
+    
     @FXML
-    private JFXButton searchButton;
+    private Button searchButton;
 
     @FXML
     private TextField tf_CIN;
@@ -87,8 +87,13 @@ public class PatientsController implements Initializable {
         SupprPatient.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                Utils.SupprimerPatient(patientsTable.getSelectionModel().getSelectedItem().getCIN());
-                patientsTable.getItems().removeAll(patientsTable.getSelectionModel().getSelectedItem());
+                try {
+                    Utils.SupprimerPatient(patientsTable.getSelectionModel().getSelectedItem().getCIN());
+                    patientsTable.getItems().removeAll(patientsTable.getSelectionModel().getSelectedItem());
+                    Utils.report(tf_Prenom.getText(),tf_Nom.getText(), "suprimée");
+                } catch (NullPointerException e){
+                    Utils.Error("Vous n'avez rien selectionné ");
+                }
 
 
             }

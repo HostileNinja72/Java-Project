@@ -45,7 +45,7 @@ public class AfficherPatientsCal implements Initializable {
         time_Col.setCellValueFactory(new PropertyValueFactory<>("Time"));
         try {
             Connection con = Utils.getConnection();
-            ResultSet rs = con.createStatement().executeQuery("Select patients.CIN, patients.Nom, patients.Prenom , RDV_time from rdv join patients on rdv.CIN = patients.CIN where RDV_Date = '" + String.valueOf(calendar.get(Calendar.YEAR)) + "-" + (calendar.get(Calendar.MONTH)+1) + "-" + day +"'" );
+            ResultSet rs = con.createStatement().executeQuery("Select patients.CIN, patients.Nom, patients.Prenom , RDV_time from rdv join patients on rdv.CIN = patients.CIN where RDV_Date = '" + String.valueOf(calendar.get(Calendar.YEAR)) + "-" + (calendar.get(Calendar.MONTH)+1) + "-" + day +"' ORDER BY RDV_time" );
 
 
             while (rs.next()) {

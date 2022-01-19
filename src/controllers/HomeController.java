@@ -1,11 +1,11 @@
 package controllers;
 
-import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -17,23 +17,25 @@ public class HomeController implements Initializable {
     @FXML
     AnchorPane AccPane;
     AnchorPane next;
-    @FXML
-    private JFXButton AcceuilBotton;
 
     @FXML
-    private JFXButton CalendrierButton;
+    private Button AcceuilBotton;
 
     @FXML
-    private JFXButton HistoriqueButton;
+    private Button CalendrierButton;
 
     @FXML
-    private JFXButton PatientsButton;
+    private Button HistoriqueButton;
 
     @FXML
-    private JFXButton PrmButton;
+    private Button PatientsButton;
 
     @FXML
-    private JFXButton RdvButton;
+    private Button Prmbutton;
+
+    @FXML
+    private Button RDVbutton;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         CalendrierButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -41,6 +43,40 @@ public class HomeController implements Initializable {
             public void handle(ActionEvent event) {
                 try {
                     next = (AnchorPane) FXMLLoader.load(getClass().getResource("/interfaces/calendrier.fxml"));
+                    AccPane.getChildren().add(next);
+                    AnchorPane.setLeftAnchor(next, 0.0);
+                    next.toFront();
+                }
+
+                catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+        });
+        HistoriqueButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    next = (AnchorPane) FXMLLoader.load(getClass().getResource("/interfaces/Historique.fxml"));
+                    AccPane.getChildren().add(next);
+                    AnchorPane.setLeftAnchor(next, 0.0);
+                    next.toFront();
+                }
+
+                catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+        });
+        RDVbutton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    next = (AnchorPane) FXMLLoader.load(getClass().getResource("/interfaces/Rdv.fxml"));
                     AccPane.getChildren().add(next);
                     AnchorPane.setLeftAnchor(next, 0.0);
                     next.toFront();

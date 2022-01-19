@@ -1,15 +1,59 @@
-
 .buttons {
     -fx-background-color: #035956;
 }
 
-
-.dash_btn:hover{
--fx-background-color : INVISIBLE;
--fx-text-fill : gray;
--fx-border-color : #ffffff;
--fx-border-width: 0px 0px 0px 4px;
+.dash_btn:hover {
+    -fx-background-color: INVISIBLE;
+    -fx-text-fill: gray;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 0px 0px 0px 4px;
 }
 
-.tableview
+.dash_btn1:hover {
+    -fx-background-color: INVISIBLE;
+    -fx-text-fill: gray;
+    -fx-border-color: #7bff00;
+    -fx-border-width: 0px 0px 0px 4px;
+}
 
+.rvText {
+    -fx-text-fill: #6FB1D2;
+    -fx-prompt-text-fill: #d4d4d4;
+    -fx-alignment: center;
+}
+
+.rvButtons {
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1.2px;
+    -fx-border-style: solid;
+    -fx-background-color: TRANSPARENT;
+    -fx-border-color: linear-gradient(to right bottom, #6fb1d2, #65a6cb, #5c9bc4, #548fbd, #4d84b5);
+    -fx-text-fill: linear-gradient(to right bottom, #6fb1d2, #65a6cb, #5c9bc4, #548fbd, #4d84b5);
+    -fx-font-weight: bold;
+}
+
+.tableview {
+    -fx-background-color: green;
+    -fx-background-radius: 30;
+    -fx-fill: white;
+}
+
+.tableview .column-header-background {
+    -fx-background-color: rgb(26, 226, 59);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0 0 10 0;
+    -fx-padding: 0 0 10 0;
+    -fx-effect: dropshadow(two-pass-box, rgb(10, 101, 107), 15, 0.0, 0.1, 3)
+}
+
+.tableview .column-header,
+.tableview .filler {
+    -fx-size: 40;
+    -fx-border-width: 0 0 10 0;
+    -fx-background-color: TRANSPARENT;
+}
+
+.tableview .column-header .label {
+    -fx-text-fill: white
+}

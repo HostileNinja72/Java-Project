@@ -6,18 +6,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="428.0" prefWidth="509.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterPatController">
+<AnchorPane prefHeight="428.0" prefWidth="509.0" style="-fx-background-color: #00917C;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterPatController">
    <children>
-      <Label layoutX="43.0" layoutY="41.0" prefHeight="49.0" prefWidth="104.0" text="Ajouter">
+      <Label layoutX="43.0" layoutY="41.0" prefHeight="49.0" prefWidth="104.0" text="Ajouter" textFill="#5df4b5">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <TextField fx:id="tf_CIN" layoutX="43.0" layoutY="109.0" promptText="CIN" />
-      <TextField fx:id="tf_Prenom" layoutX="43.0" layoutY="161.0" promptText="Prenom" />
-      <TextField fx:id="tf_Nom" layoutX="43.0" layoutY="214.0" promptText="Nom" />
-      <TextField fx:id="tf_maladie" layoutX="44.0" layoutY="264.0" promptText="Maladie" />
-      <TextField fx:id="tf_Etat" layoutX="43.0" layoutY="310.0" promptText="Etat" />
-      <JFXButton fx:id="Enregistrer" layoutX="325.0" layoutY="187.0" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: white;" text="Enregistrer" textFill="#34df5c" />
+      <TextField fx:id="tf_CIN" layoutX="43.0" layoutY="109.0" promptText="CIN" style="-fx-background-color: INVISIBLE; -fx-border-color: grey;" />
+      <TextField fx:id="tf_Prenom" layoutX="43.0" layoutY="161.0" promptText="Prenom" style="-fx-background-color: INVISIBLE; -fx-border-color: grey;" />
+      <TextField fx:id="tf_Nom" layoutX="43.0" layoutY="214.0" promptText="Nom" style="-fx-background-color: INVISIBLE; -fx-border-color: grey;" />
+      <TextField fx:id="tf_maladie" layoutX="44.0" layoutY="264.0" promptText="Maladie" style="-fx-background-color: INVISIBLE; -fx-border-color: grey;" />
+      <TextField fx:id="tf_Etat" layoutX="43.0" layoutY="310.0" promptText="Etat" style="-fx-background-color: INVISIBLE; -fx-border-color: grey;" />
+      <JFXButton fx:id="Enregistrer" layoutX="325.0" layoutY="187.0" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: #5df4b5;" text="Enregistrer" textFill="WHITE" />
    </children>
 </AnchorPane>

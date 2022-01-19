@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 
 import javafx.fxml.Initializable;
 
-import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 
 
@@ -38,12 +37,13 @@ public class AjouterPatController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Enregistrer.setOnAction(event -> {
-            if (!tf_Etat.getText().trim().isEmpty() && !tf_CIN.getText().trim().isEmpty() && !tf_Nom.getText().trim().isEmpty() && !tf_Prenom.getText().trim().isEmpty() && !tf_maladie.getText().trim().isEmpty() )
+            if (!tf_CIN.getText().trim().isEmpty() && !tf_Nom.getText().trim().isEmpty() && !tf_Prenom.getText().trim().isEmpty() )
             {
                 Utils.patients(event, tf_CIN.getText(), tf_Nom.getText(), tf_Prenom.getText(), Enregistrer);
 
+
             } else {
-               Utils.Error("Merci d'entrer toute les infromations");
+               Utils.Error("Merci d'etre sure d'entrer le CIN, le Nom et le Prenom");
             }
         });
 

@@ -4,9 +4,9 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AfficherPatientsCal">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #00917C;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AfficherPatientsCal">
    <children>
-      <TableView fx:id="afficherTableau" layoutX="30.0" layoutY="51.0" prefHeight="200.0" prefWidth="520.0">
+      <TableView fx:id="afficherTableau" layoutX="40.0" layoutY="55.0" prefHeight="290.0" prefWidth="520.0" styleClass="tableview" stylesheets="@../sample/App.css">
         <columns>
           <TableColumn fx:id="CIN_col" prefWidth="75.0" text="CIN" />
           <TableColumn fx:id="Nom_col" prefWidth="75.0" text="Nom" />

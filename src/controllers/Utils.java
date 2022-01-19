@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.Calendar;
 import java.util.Optional;
+import java.util.Random;
 
 public class Utils {
     public static void patients(ActionEvent event, String cIN, String nom, String prenom, JFXButton Enregistrer){
@@ -34,6 +35,7 @@ public class Utils {
                 psInsert.setString(2, nom);
                 psInsert.setString(3, prenom);
                 psInsert.executeUpdate();
+                Utils.report(prenom, nom, "ajoutée");
                 Stage stage = (Stage) Enregistrer.getScene().getWindow();
                 stage.close();
             }
@@ -184,7 +186,6 @@ public class Utils {
                 else if (option.get() == ButtonType.CANCEL){
                     alert.close();
                 }
-
             }
             else{
                 Deletepatient.setString(1, CIN);
@@ -232,5 +233,61 @@ public class Utils {
         alert.show();
     }
 
+    public static void AjouterRDV(int idRDV, String Date, String CIN, String Heure, String Minutes){
+        String time = Heure + ":" + Minutes + ":00";
+        Connection connection = null;
+        PreparedStatement psInsert = null;
+        try {
+            connection = Utils.getConnection();
+
+            psInsert = connection.prepareStatement("Insert INTO rdv (idRDV, CIN, RDV_date, RDV_time) VALUES (?, ? , ?, ?)");
+            psInsert.setInt(1, idRDV);
+            psInsert.setString(2, CIN);
+            psInsert.setString(3, Date);
+            psInsert.setString(4, time);
+            psInsert.executeUpdate();
+            Utils.report(CIN,"", "RDV pour le " + Date +" a l'heure " + Heure);
+
+        }catch (SQLIntegrityConstraintViolationException e){
+            Utils.Error("Ce patients n'existe pas!");
+
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            if (psInsert != null){
+                try {
+                    psInsert.close();
+                } catch (SQLException e){
+                    e.printStackTrace();
+                }
+            }
+            if (connection != null){
+                try {
+                    connection.close();
+                } catch (SQLException e){
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+    public static int getRandom(){
+        Random random = new Random();
+        return random.nextInt(99999999);
+    }
+    public static void report(String Nom, String Prenom, String Action){
+        String A = "Le patient "+ Prenom + " "+ Nom + "a été " + Action ;
+        Connection connection = null;
+        PreparedStatement psInsert = null;
+        try{
+            connection = Utils.getConnection();
+            psInsert = connection.prepareStatement("Insert INTO history (idHistory, Description) VALUES (?, ?)");
+            psInsert.setInt(1, getRandom());
+            psInsert.setString(2, A);
+            psInsert.executeUpdate();
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+
+    }
 
 }
